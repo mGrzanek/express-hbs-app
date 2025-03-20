@@ -1,7 +1,11 @@
 const express = require('express');
 const path = require('path');
+const hbs = require('express-handlebars');
 const convertText = require('./utils/convertText');
 const app = express();
+
+app.engine('.hbs', hbs());
+app.set('view engine', '.hbs');
 
 app.use((req, res, next) => {
     res.show = (name) => {
@@ -33,7 +37,7 @@ app.get('/history', (req, res) => {
 });
 
 app.get('/hello/:name', (req, res) => {
-    res.send(`Hello ${convertText(req.params.name)}!`);
+    res.render('hello', { layout: false, name: convertText(req.params.name) });
 });
 
 app.use((req, res) => {
