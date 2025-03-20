@@ -3,6 +3,23 @@ body {
     margin: 20px;
 }
 
+body.dark-layout {
+    background-color: #2f3640;
+    color: white;
+}
+
+body.dark-layout a {
+    color: #fbc531;
+}
+
+body.dark-layout a:visited {
+    color: #7bed9f;
+}
+
+body.dark-layout h1 {
+    display: none;
+}
+
 h1 {
     font-weight: lighter;
     font-style: italic;
