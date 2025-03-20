@@ -34,7 +34,7 @@ app.get('/hello/:name', (req, res) => {
 });
 
 app.use((req, res) => {
-    res.status(404).send('404 not found...');
+    res.status(404).render('not-found', { layout: 'dark' });
 })
 
 app.listen(8000, () => {
