@@ -16,10 +16,6 @@ body.dark-layout a:visited {
     color: #7bed9f;
 }
 
-body.dark-layout h1 {
-    display: none;
-}
-
 h1 {
     font-weight: lighter;
     font-style: italic;
